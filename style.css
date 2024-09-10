@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=SUSE:wght@100..800&display=swap');
+ 
+:root {
+   --primary-color:#E85C0D;
+   --secondary-color:#FABC3F;
+   --accent-color:#FABC3F;
+   --additional-color:#821131;
+   --black-color:#000;
+   --white-color:#fff;
+}
+
+h1,
+h2,
+h3,
+h4
+{
+   text-wrap:balance
+}
+p,
+li,
+figcaption {
+   text-wrap: pretty;
+   max-width: 65ch;
+}
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+ }
+
+ body{
+   display: grid;
+   grid-template-columns: 
+   [full-width-start] 10% [content-start heading-start] 1fr [heading-end] 1fr [content-end] 10% [full-width-end];
+
+   
+ }
+
+ li, a, button {
+   font-family: "Montserrat" , sans-serif;
+   font-weight: 500;
+   font-size: 16px;
+   color:var(--black-collor);
+   text-decoration: none;
+ }
+
+ .logo_name{
+   color: var(--primary-color);
+}
+
+ header {
+   grid-column: full-width-start / full-width-end;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 30px 10%;
+ }
+ .logo {
+   cursor: pointer;
+}
+
+.nav__links {
+   list-style: none ;
+}
+
+.nav__links li {
+   display: inline-block;
+   padding: 0px 20px;
+}
+.nav__links li a{
+   transition: all 0.3s ease 0s;
+}
+.nav__links li a:hover {
+   color:var(--primary-color);
+}
+
+.button {
+   padding: 9px 25px;
+   background-color: var(--primary-color);
+   border-radius: 50px;
+   border: none;
+}
+
+.rent {
+   margin-bottom: 20px;
+}
+
+
+.accordion {
+   background-color:var(--primary-color);
+   color: var(--white-color);
+   cursor: pointer;
+   padding: 18px;
+   width: 100%;
+   border: none;
+   text-align: center;
+   outline: none;
+   font-size: 15px;
+   transition: 0.4s;
+ }
+ .active, .accordion:hover {
+   background-color:var(--secondary-color); 
+ }
+ 
+ .panel {
+   padding: 0 18px;
+   display: none;
+   background-color: white;
+   overflow: hidden;
+ }
+ .hero {
+   grid-column: content;
+   display: grid;
+   padding: 0 3.2rem;
+   margin: 0 auto;
+   align-items: center;
+   gap: 0 9.6rem
+ }
+
+ .heading {
+       
+      font-size: 5.2rem;
+      color: #333;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.05;
+      margin-bottom: 3.6rem;
+    }
+    
+ .big {
+   color: var(--primary-color);
+ }
+ .heading_text {
+   grid-column: heading-start / heading-end;
+   margin-top: 33px;
+ }
+
+ .hero-img {
+   grid-column: heading-end / full-width-end;
+   
+   
+ }
+.trip {
+   grid-column: content-start / content-end;
+   align-items: center;
+   gap: 2rem;
+   display: grid;
+   grid-template-columns: subgrid;
+
+}
+.select_car {
+   grid-column: content-start / heading-end;
+}
+.drive {
+   grid-column: heading-end / content-end;
+
+}
+
+.operator {
+   grid-column: content-end / full-width-end;
+}
+
+
+
+
+.book {
+   grid-column: content-start / content-end;
+   border: 0.3rem solid var(--additional-color);
+}
+
+.save {
+   grid-column: full-width-start / full-width-end;
+   
+   color: var(--primary-color);
+   background-color:var(--black-collor);
+   height: 15rem;
+   text-align: center;
+   
+}
+
+.why {
+   grid-column: content-start / content-end;
+   text-align: center;
+   height: 50dvh;
+}
+.why > * {
+   
+}
+.trip_heading {
+   text-align: center;
+}
+.review {
+   grid-column: content-start / content-end;
+  
+}
+
+.faq{
+   grid-column: content-start / content-end;
+   
+
+}
+
+footer{
+   grid-column:  full-width-start / full-width-end;
+   align-content: center;
+   background-color:var(--black-color);
+   color: var(--white-color);
+   margin-top: 2rem;
+   display:grid;
+   grid-template-columns: subgrid;
+   height: 70dvh;
+}
+
+.download {
+  grid-column: content-start / heading-end;
+}
+
+.hours {
+   grid-column: heading-end / content-end;
+}
+
+.download > p {
+   padding: 1em;
+}
